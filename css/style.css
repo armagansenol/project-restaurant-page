@@ -1,0 +1,99 @@
+body {
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 480px;
+    min-width: 480px;
+    z-index: 1;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.headline {
+    color: gold;
+    height: 80px;
+    width: 480px;
+    font-size: 60px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.info {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 20px;
+    justify-self: flex-start;
+    margin-left: 40px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.sideimg {
+    width: 350px;
+    height: 200px;
+    object-fit: contain;
+    align-self: center;
+    justify-self: flex-end;
+    transition-duration: 3s;;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 350px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: gold;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+
+@keyframes animatedBackground {
+    from {
+        background-position: 100% 0%;
+    }
+
+    to {
+        background-position: 0% 100%;
+    }
+}
+
+.visuals {
+    height: 100%;
+    width: 70vw;
+    align-self: flex-end;
+    background-image: url(../src/img/pie2.jpg);
+    background-position: 100% 0%;
+    background-repeat: repeat-x;
+    animation: animatedBackground 10s linear infinite alternate;
+}
